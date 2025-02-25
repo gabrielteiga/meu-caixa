@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  database:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: meucaixa_db
+    volumes:
+      - ./docker/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
